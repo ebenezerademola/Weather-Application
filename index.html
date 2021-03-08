@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mandali&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&family=Montserrat:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Weather App</title>
 </head>
 <body>
     <div class="card">
         <div class="search">
-            <input type="text" class="searchbar">
+            <input type="text" class="searchbar" placeholder="Enter a location">
             <button>
                 <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg">
                     <path 
@@ -21,12 +25,19 @@
         </div>
         <div class="weather">
             <h2 class="city">Weather in Baltimore</h2>
-            <div class="temp">35°F</div>
-            <img src="" alt="" class="icon">
-            <div class="description">Sunny</div>
-            <div class="humidity">43%</div>
-            <div class="wind">9 mph</div>
+            <div class="top">
+                <div class="temp">35°F</div>
+                <div class="left">
+                    <img src="" alt="" class="icon">
+                    <div class="description">Sunny</div>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="humidity">Humidity: 43%</div>
+                <div class="wind">Wind Speed: 9 mph</div>
+            </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
