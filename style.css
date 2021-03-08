@@ -51,9 +51,28 @@ button {
     margin-left: 15px;
     background: #c7c7c72b;
     color: white;
+    transition: .1s ease-in;
+}
+
+button:hover {
+    background: #c7c7c75b;
 }
 
 /* Weather */ 
+
+.weather.loading {
+    visibility: hidden;
+    max-height: 10px;
+    position: relative;
+}
+
+/* .weather.loading:after {
+    visibility: visible;
+    content: "Loading...";
+    color: white;
+    position: absolute;
+    top: 0;
+} */
 
 .city {
     margin: 20px 0 10px;
@@ -61,7 +80,7 @@ button {
 
 .top {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: flex-end;
     margin-bottom: 15px;
 }
@@ -76,6 +95,10 @@ button {
     width: 130px;
 }
 
+.description {
+    text-transform: capitalize;
+}
+
 .bottom {
     display: flex;
     justify-content: space-around;
@@ -87,6 +110,5 @@ button {
     font-family: 'Montserrat', sans-serif;
     font-size: 6.5em;
     /* padding-right: 25px; 
-    border-right: solid 2px white;*/
-    
+    border-right: solid 2px white;*/  
 }

@@ -23,7 +23,20 @@ let weather = {
         document.querySelector(".description").innerText = `${description.charAt(0).toUpperCase() + description.slice(1)}`;
         document.querySelector(".humidity").innerText = `Humidity: ${humidity}%`;
         document.querySelector(".wind").innerText = `Wind: ${speed}`;
-
-
+        document.querySelector(".weather").classList.remove("loading");
+    },
+    search: function () {
+        this.fetchWeather(document.querySelector(".searchbar").value);
     }
 }
+
+document.querySelector(".search button").addEventListener('click', function () {
+     weather.search();
+})
+
+document.querySelector(".searchbar").addEventListener("keyup", function(event) {
+    if (event.keyCode == 13) {
+        event.preventDefault();
+        document.querySelector(".search button").click();
+    }
+})
