@@ -12,9 +12,18 @@ let weather = {
     },
     displayWeather: function(data) {
         const { name } = data;
+        const { country } = data.sys
         const { icon, description } = data.weather[0];
         const { temp, humidity } = data.main;
         const { speed } = data.wind;
-        console.log(name, icon, description, temp, humidity, speed)
+        console.log(name, country, icon, description, temp, humidity, speed)
+        document.querySelector(".city").innerText = `${name}, ${country}`;
+        document.querySelector(".temp").innerText = `${Math.round(temp)}°F`;
+        document.querySelector(".icon").src = `http://openweathermap.org/img/wn/${icon}@2x.png`
+        document.querySelector(".description").innerText = `${description.charAt(0).toUpperCase() + description.slice(1)}`;
+        document.querySelector(".humidity").innerText = `Humidity: ${humidity}%`;
+        document.querySelector(".wind").innerText = `Wind: ${speed}`;
+
+
     }
 }
