@@ -12,24 +12,40 @@ let weather = {
     },
     displayWeather: function(data) {
         const { name } = data;
-        const { country } = data.sys
+        const { country, sunrise, sunset } = data.sys
         const { icon, description } = data.weather[0];
-        const { temp, humidity } = data.main;
+        const { temp, humidity, feels_like } = data.main;
         const { speed } = data.wind;
-        console.log(name, country, icon, description, temp, humidity, speed)
+        console.log(name, country, sunrise, sunset, icon, description, feels_like, temp, humidity, speed)
         document.querySelector(".city").innerText = `${name}, ${country}`;
+        //document.querySelector(".sunrise-txt").innerText = ` ${sunrise}`;
+        //document.querySelector(".sunset-txt").innerText = ` ${sunset}`;
         document.querySelector(".temp").innerText = `${Math.round(temp)}°F`;
         document.querySelector(".icon").src = `http://openweathermap.org/img/wn/${icon}@2x.png`
-        document.querySelector(".description").innerText = `${description.charAt(0).toUpperCase() + description.slice(1)}`;
-        document.querySelector(".humidity").innerText = `Humidity: ${humidity}%`;
-        document.querySelector(".wind").innerText = `Wind: ${speed}`;
+        document.querySelector(".description").innerText = `${description}`;
+        document.querySelector(".feel").innerText = `Feels like ${Math.round(feels_like)}°F`
+        document.querySelector(".humidity-txt").innerText = `${humidity}%`;
+        document.querySelector(".wind-txt").innerText = `${speed} mph`;
         document.querySelector(".weather").classList.remove("loading");
-        document.body.style.backgroundImage = `url('https://source.unsplash.com/1600x900/?${name}')`;
+        document.body.style.backgroundImage = `url('https://source.unsplash.com/1600x900/?${name}, ${description}')`;
+        
     },
     search: function () {
         this.fetchWeather(document.querySelector(".searchbar").value);
-    }
+    },
+    
 }
+
+// function suntime(x) {
+//     let dateObj = new Date(x * 1000);
+
+//     let hours = dateObj.getUTCHours.toString.padStart(2,0);
+//     let minutes = dateObj.getUTCMinutes.toString.padStart(2,0);
+//     let seconds = dateObj.getUTCSeconds.toString.padStart(2,0);
+
+//     console.log(` Time is ${hours}:${minutes}:${seconds}`);
+//     return `${hours}:${minutes}:${seconds}`;
+// }
 
 document.querySelector(".search button").addEventListener('click', function () {
      weather.search();
@@ -41,3 +57,4 @@ document.querySelector(".searchbar").addEventListener("keyup", function(event) {
         document.querySelector(".search button").click();
     }
 })
+

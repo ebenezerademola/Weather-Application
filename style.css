@@ -60,13 +60,13 @@ button:hover {
 
 /* Weather */ 
 
-.weather.loading {
+/*.weather.loading {
     visibility: hidden;
-    max-height: 10px;
+    max-height: 0px;
     position: relative;
 }
 
-/* .weather.loading:after {
+ .weather.loading:after {
     visibility: visible;
     content: "Loading...";
     color: white;
@@ -76,6 +76,14 @@ button:hover {
 
 .city {
     margin: 20px 0 10px;
+    font-size: 2em;
+}
+
+.description, 
+.feel {
+    margin-left: 15px;
+    font-weight: bold;
+    font-size: 1.1em;
 }
 
 .top {
@@ -83,12 +91,6 @@ button:hover {
     justify-content: space-around;
     align-items: flex-end;
     margin-bottom: 15px;
-}
-
-.top .left {
-    display: flex;
-    align-items: center;
-    flex-direction: column-reverse;
 }
 
 .icon {
@@ -99,16 +101,40 @@ button:hover {
     text-transform: capitalize;
 }
 
-.bottom {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-}
-
 .temp {
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-family: 'Montserrat', sans-serif;
-    font-size: 6.5em;
-    /* padding-right: 25px; 
-    border-right: solid 2px white;*/  
+    font-size: 7em;
 }
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 20px 0;
+    font-size: 1.1em;
+}
+
+.humidity, .wind, .sunset, .sunrise {
+    display: flex;
+    justify-content: space-between;
+}
+
+.txt {
+    font-weight: bold;
+}
+
+.bottom .fas {
+    padding: 10px;
+}
+
+.humidity-icon {
+    color: rgb(25, 197, 228);
+}
+
+.wind-icon {
+    color:rgba(255, 255, 255, 0.8); 
+}
+
+
+
+

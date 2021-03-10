@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Mandali&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>Weather App</title>
 </head>
@@ -25,16 +26,29 @@
         </div>
         <div class="weather loading">
             <h2 class="city">Weather in Baltimore</h2>
+            <div class="description">Sunny</div>
+            <div class="feel">Feels like 38°F</div>
             <div class="top">
                 <div class="temp">35°F</div>
-                <div class="left">
-                    <img src="http://openweathermap.org/img/wn/01d@2x.png" alt="" class="icon">
-                    <div class="description">Sunny</div>
-                </div>
+                <img src="http://openweathermap.org/img/wn/01d@2x.png" alt="" class="icon">
             </div>
             <div class="bottom">
-                <div class="humidity">Humidity: 43%</div>
-                <div class="wind">Wind Speed: 9 mph</div>
+                <div class="humidity">
+                    <span class="humidity-lbl"><i class="fas fa-tint humidity-icon"></i>Humidity:</span>
+                    <span class="txt humidity-txt"> 43%</span>
+                </div>
+                <div class="wind">
+                    <span class="wind-lbl"><i class="fas fa-wind wind-icon"></i>Wind Speed:</span>
+                    <span class="txt wind-txt"> 9 mph</span>
+                </div>
+                <!-- <div class="sunrise">
+                    <span class="sunrise-lbl"><i class="fas fa-wind sunr-icon"></i>Sunrise:</span>
+                    <span class="txt sunrise-txt"> 9 mph</span>
+                </div>
+                <div class="sunset">
+                    <span class="sunset-lbl"><i class="fas fa-wind suns-icon"></i>Sunset:</span>
+                    <span class="txt sunset-txt"> 9 mph</span> -->
+                </div>
             </div>
         </div>
     </div>
