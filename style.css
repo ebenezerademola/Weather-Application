@@ -58,21 +58,30 @@ button:hover {
     background: #c7c7c75b;
 }
 
-/* Weather */ 
+/* Landing */
 
-/*.weather.loading {
-    visibility: hidden;
-    max-height: 0px;
-    position: relative;
+.landing {
+    margin: 25px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
 }
 
- .weather.loading:after {
-    visibility: visible;
-    content: "Loading...";
-    color: white;
-    position: absolute;
-    top: 0;
-} */
+.landing-icon {
+    font-size: 4em;
+    padding: 20px;
+}
+
+.landing-prompt {
+    text-align: center;
+}
+
+/* Weather */ 
+
+.weather {
+    display: none;
+}
 
 .city {
     margin: 20px 0 10px;
@@ -135,6 +144,24 @@ button:hover {
     color:rgba(255, 255, 255, 0.8); 
 }
 
+.fade {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+  }
+  
+  @-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+  }
+  
+  @keyframes animatebottom { 
+    from{ bottom:-100px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+  }
+  
 
 
 
