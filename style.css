@@ -162,6 +162,65 @@ button:hover {
     to{ bottom:0; opacity:1 }
   }
   
+@media screen and (max-width: 600px) {
+    .card {
+        width: 70%;
+        max-width: none;
+    }
 
+    .temp {
+        font-size: 5.5em;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .temp {
+        font-size: 5em;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .top {
+        margin-top: 10px;
+    }
+
+    .temp {
+        font-size: 4.5em;
+    }
+    
+    .bottom {
+        margin: 10px 0 0;
+    }
+
+    .humidity, .wind, .sunset, .sunrise {
+        display: inline-block;
+    }
+}
+  
+@media screen and (max-width: 350px) {
+    .card {
+        width: 70%;
+    }
+
+    .city {
+        font-size: 1.5em;
+    }
+
+    .top {
+        align-items: center;
+    }
+
+    .temp {
+        font-size: 3em;
+    }
+
+    .icon {
+        width: 35%;
+    }
+
+    .bottom {
+        font-size: .95em;
+    }
+}
 
 
