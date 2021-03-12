@@ -1,6 +1,19 @@
 let weather = {
     apiKey: "c67dbb3cd3be0c4fdad23ff12579e44b",
     fetchWeather: function (city) {
+        // try {
+        //     fetch(
+        //     "http://api.openweathermap.org/data/2.5/weather?q=" 
+        //     + city 
+        //     + "&units=imperial&appid=" 
+        //     + this.apiKey
+        //     )
+        //     .then((response) => response.json())
+        //     .then((data) => this.displayWeather(data));
+        // } catch {
+        //     document.querySelector(".card").style.display = "none";
+        // }
+
         fetch(
             "http://api.openweathermap.org/data/2.5/weather?q=" 
             + city 
@@ -8,7 +21,7 @@ let weather = {
             + this.apiKey
         )
         .then((response) => response.json())
-        .then((data) => this.displayWeather(data));
+        .then((data) => this.displayWeather(data));    
     },
     displayWeather: function(data) {
         const { name } = data;
