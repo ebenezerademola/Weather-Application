@@ -184,6 +184,10 @@ button:hover {
         margin-top: 10px;
     }
 
+    .landing {
+        width: 100%;
+    }
+
     .temp {
         font-size: 4.5em;
     }
