@@ -32,7 +32,7 @@ let weather = {
         console.log(name, country, icon, description, feels_like, temp, humidity, speed);
         document.querySelector(".city").innerText = `${name}, ${country}`;
         document.querySelector(".temp").innerText = `${Math.round(temp)}°F`;
-        document.querySelector(".icon").src = `http://openweathermap.org/img/wn/${icon}@2x.png`
+        document.querySelector(".icon").src = `https://openweathermap.org/img/wn/${icon}@2x.png`
         document.querySelector(".description").innerText = `${description}`;
         document.querySelector(".feel").innerText = `Feels like ${Math.round(feels_like)}°F`
         document.querySelector(".humidity-txt").innerText = `${humidity}%`;
